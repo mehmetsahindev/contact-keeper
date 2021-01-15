@@ -4,5 +4,6 @@
         "user": "root",
         "password": "",
         "database": "contactkeeper"
-    }
+    },
+    "jwtSecret": "secret"
 }
