@@ -1,12 +1,20 @@
 const express = require('express');
 const db = require('./config/db');
 
+const Models = require('./models/Models');
+
 const app = express();
 
 // Connect Database
 db.authenticate()
 	.then(() => console.log('Database connected...'))
 	.catch((err) => console.log('Error: ' + err));
+
+Models();
+// Sync tables
+db.sync().then(() => {
+	console.log('All tables created');
+});
 
 // Init middleware
 app.use(express.json({ extended: false }));

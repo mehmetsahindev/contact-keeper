@@ -12,9 +12,12 @@ const Contact = db.define(
 			type: Sequelize.STRING,
 			allowNull: false,
 		},
-		password: {
+		phone: {
 			type: Sequelize.STRING,
-			allowNull: false,
+		},
+		type: {
+			type: Sequelize.STRING,
+			defaultValue: 'personal',
 		},
 		date: {
 			type: Sequelize.DATE,
@@ -27,4 +30,4 @@ const Contact = db.define(
 	}
 );
 
-module.exports = User;
+module.exports = Contact;
