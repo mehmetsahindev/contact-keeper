@@ -3,7 +3,7 @@ import ContactContext from '../../context/contact/contactContext';
 
 const ContactFilter = () => {
 	const contactContexct = useContext(ContactContext);
-	const text = useRef('');
+	const text = useRef();
 
 	const { filterContacts, clearFilter, filtered } = contactContexct;
 

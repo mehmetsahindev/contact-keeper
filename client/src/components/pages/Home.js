@@ -23,7 +23,7 @@ const Home = () => {
 			</div>
 			<div>
 				<h2 className='text-primary'>Contacts</h2>
-				{contacts.length !== 0 && <ContactFilter />}
+				{contacts !== null && contacts.length !== 0 && <ContactFilter />}
 				<Contacts />
 			</div>
 		</div>
